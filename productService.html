@@ -369,7 +369,7 @@ position:relative;
 }
 </style>
 
-<!-- contact what'sup css start -->
+<!-- social media section css start here -->
 <style>
     .query-box {
       width: 350px;
@@ -383,7 +383,7 @@ position:relative;
     .query-header {
       background-color: #008000;
       color: white;
-      padding: 7px 16px;
+      padding: 8px 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -505,7 +505,7 @@ position:relative;
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
+	bottom:48px;
 	right:40px;
 	background-color:#25d366;
 	color:#FFF;
@@ -526,7 +526,7 @@ position:relative;
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 110px;
+  bottom: 117px;
   right: 40px;
   background-color: #d44638; /* Gmail red */
   color: #FFF;
@@ -542,9 +542,36 @@ position:relative;
 .my-float-email {
   margin-top: 16px;
 }
+.contact_form{
+    /* display: none; */
+}
+.contact-form-btn:hover + .contact_form{
+    display: block;
+}
+.float-user {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 181px;
+  right: 40px;
+  background-color: #d44638; /* Gmail red */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+.float-user:hover{
+    color:white;
+
+}
+.my-float-user {
+  margin-top: 16px;
+}
 
 </style>
-    
+<!-- social media section css end here -->
 <meta name="VIcurrentDateTime" content="638814467671304297" />
 <meta name="VirtualFolder" content="/" />
 <script type="text/javascript" src="layouts/system/VisitorIdentification.js"></script>
@@ -1456,15 +1483,45 @@ position:relative;
         </div>
     </div>
 
-     <section>
+    <!-- social media section start here -->
+
+    <section>
+         <!-- what's up button start -->
+      <div class="whatsUp-btn">
+        <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+        </a>
+      </div> 
+  
+    <!-- email start here -->
+      <div class="email">
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&su=Query&body=Hello%2C%20I%20would%20like%20to%20know%20more..." 
+        class="float-email" target="_blank" title="Email Us">
+        <i class="fa-solid fa-envelope my-float-email"></i>
+    </a>
+     </div>
+    </section>
+    <section class="position-fixed form_btn" style="right: 0;
+    z-index: 999;
+    bottom: 0;
+    width: 18rem;"> 
+    <div class="contact-form-btn position-relative">
+        <div class="query-header" style="border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;background-color: #f9ec21 !important;color:#008000; cursor: pointer;">
+        Drop us a Query <span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </span>
+        </div>
+    </div>
+    </section>
+    <section class="position-fixed  drop_form" style="z-index: 99999; bottom:0;right:0;display: none;">
   <!-- contact form start -->
     <div class="contact-form">
-       <div class="contact-form-btn">
-        <button>Form</button>
-       </div>
-       <div class="form">
+  
+   
+       <div class="contact_form">
          <div class="query-box">
-    <div class="query-header">
+    <div class="query-header" id="form_hidden">
       Drop us a Query <span>
         <i class="fa-solid fa-chevron-down"></i>
       </span>
@@ -1521,23 +1578,9 @@ position:relative;
        </div>
     </div>
     <!-- contact form end -->
-    <!-- what's up button start -->
-      <div class="whatsUp-btn">
-        <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
-      </div>
-    <!-- what's up button end  -->
-    <!-- email start here -->
-     <div class="email">
-     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&su=Query&body=Hello%2C%20I%20would%20like%20to%20know%20more..." 
-        class="float-email" target="_blank" title="Email Us">
-        <i class="fa-solid fa-envelope my-float-email"></i>
-    </a>
-     </div>
-    <!-- email end here  -->
-     </section>
-  
+    </section>
+
+  <!-- social media section end here -->
     <!-- Footer -->
     <footer class="pt-5 bg-white position-relative d-block">
         
@@ -1849,6 +1892,21 @@ const Bioswiper = new Swiper(".myBiomass", {
     }
   });
 </script>
+
+<!-- social media script start here -->
+<script>
+    const formButn = document.querySelector(".form_btn");
+    const dropForm = document.querySelector(".drop_form");
+    const secDropfrom = document.querySelector("#form_hidden");
+    formButn.onclick=()=>{
+        dropForm.style.display="block";
+    }
+    secDropfrom.onclick=()=>{
+     dropForm.style.display="none";
+    //  console.log("hello world")
+    }
+</script>
+<!-- social media script end here -->
 
     <!-- slider script end here  -->
     <script src="scripts/Power/jquery.min.js@v2"></script>

@@ -345,6 +345,209 @@ position:relative;
      
 </style>
     
+<!-- social media section css start here -->
+<style>
+    .query-box {
+      width: 350px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      border-top: 8px solid #008000;
+    }
+
+    .query-header {
+      background-color: #008000;
+      color: white;
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .query-header span {
+      display: flex;
+      align-items: center;
+    }
+
+    .query-header img {
+      width: 10px;
+      margin-left: 8px;
+    }
+
+    .query-body {
+      padding: 16px;
+    }
+
+    .avatars {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .avatars img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin: 0 4px;
+      border: 2px solid white;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .phone-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    column-gap: 0.8rem;
+    }
+
+    .phone-icon {
+   line-height: 0;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    background-color: #008000 !important;
+    border-radius: 5px;
+    justify-content: center;
+    }
+
+   .phone-icon svg{
+    fill: #fff !important;
+    width: 20px;
+    height: 20px;
+    margin-top: 7px;
+   }
+    .phone-text {
+      color: #d32f2f;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .availability {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: #008000;
+    font-weight: 400;
+    }
+
+    textarea,
+    input,
+    select {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .phone-input {
+      display: flex;
+      gap: 8px;
+    }
+
+    .phone-input select {
+      width: 30%;
+    }
+
+    .phone-input input {
+      width: 70%;
+    }
+
+    .submit-button {
+     border-radius: 3px;
+    background-color: #008000;
+    width: 100%;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    }
+
+    .submit-button:hover {
+      background-color: #023a02;
+    }
+
+    .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:48px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.float:hover {
+    color:#fff;
+}
+.my-float{
+	margin-top:16px;
+}
+
+.float-email {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 117px;
+  right: 40px;
+  background-color: #d44638; /* Gmail red */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+.float-email:hover {
+   color:#fff;
+}
+.my-float-email {
+  margin-top: 16px;
+}
+.contact_form{
+    /* display: none; */
+}
+.contact-form-btn:hover + .contact_form{
+    display: block;
+}
+.float-user {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 181px;
+  right: 40px;
+  background-color: #d44638; /* Gmail red */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+.float-user:hover{
+    color:white;
+
+}
+.my-float-user {
+  margin-top: 16px;
+}
+
+</style>
+<!-- social media section css end here -->
 <meta name="VIcurrentDateTime" content="638814467671304297" />
 <meta name="VirtualFolder" content="/" />
 <script type="text/javascript" src="layouts/system/VisitorIdentification.js"></script>
@@ -993,9 +1196,10 @@ position:relative;
     <!-- /Header -->
     <!--  Main content Section-->
     <main role="main" class="main">
-        
 
-        <div class="mainSlider">
+<div class="sticky_section">
+<section>
+    <div class="mainSlider">
             <div class="swiper myBanner">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -1062,12 +1266,11 @@ position:relative;
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
               </div>
-      </div>
+    </div>
+</section>
+</div>
 
-
-
-
-
+<div class="sticky_section">
 <section class="py-5 position-relative section__covid-donation bg-white" id="covid19">
 
     <div class="container">
@@ -1109,23 +1312,13 @@ position:relative;
     </div>
     </div>
 </section>
-
-<div class="modal video" id="video-2" data-keyboard="false" data-backdrop="static" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <button type="button" class="close" onclick="CloseModal2('video-2')" data-dismiss="modal">x</button>
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="embed-container">
-                    <iframe id="v-2" src="index.html" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/Video Modal-->
 </div>
 
-<section class="py-5 d-lg-none d-block">
+
+
+
+<div class="sticky_section">
+    <section class="py-5 d-lg-none d-block">
     <div class="container">
         <h2 class="border-l txt-lg mb-3 pl-3">Businesses</h2>
         <p class="mb-3 pl-4">Committed to ensure energy security for the nation</p>
@@ -1144,7 +1337,10 @@ position:relative;
         </div>
     </div>
 </section>
-<section class="map-section position-relative d-lg-block d-none" id="firstsection">
+</div>
+
+<div class="sticky_section">
+<section class=" map-section position-relative d-lg-block d-none" id="firstsection" >
     <div>
         <div class="map-above-content">
             <div class="container">
@@ -1358,8 +1554,12 @@ position:relative;
         </div>
     </div>
 </section>
+</div>
+
 <!--SVG MAP-->
-<section class="py-5 position-relative trainingSec">
+
+<div class="sticky_section">
+<section class="py-5 position-relative trainingSec" >
     <div class="bg-images">
         <img alt="" src="./images/ports/training-thermalPower.jpg" />
     </div>
@@ -1386,7 +1586,11 @@ position:relative;
         </div>
     </div>
 </section>
+</div>
+
 <!-- what we do start here -->
+
+<div class="sticky_section">
  <section class="pt-5 pb-5 aos-animate" data-aos="fade-up">
     <div class="container">
        
@@ -1556,7 +1760,10 @@ position:relative;
         </div>
     </div>
  </section>
-        <!-- journey section start here -->
+
+ <!-- journey section start here -->
+
+
 <section class="pt-3 pb-3">
     <div class="container-fluid">
         <div class="row">
@@ -1564,9 +1771,16 @@ position:relative;
         </div>
     </div>
 </section>
+</div>
+
+
+
+
        
 <!-- what we do end here  -->
 
+<!-- our impact start here -->
+<div class="sticky_section">
 <section class="pt-5" data-aos="fade-up">
     <div class="container">
         <h2 class="border-l txt-lg mb-3 pl-3 mb-5">Our Impact</h2>
@@ -1612,21 +1826,11 @@ position:relative;
        </div>
     </div>
  </section>
- <div class="modal video" id="video-01" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-       <div class="modal-content">
-          <button type="button" class="close" onclick="CloseModal2('video-01')" data-dismiss="modal">&times;</button>
-          <!-- Modal body -->
-          <div class="modal-body">
-             <div class="embed-container"><iframe data-src="https://www.youtube.com/embed/1O71eNE6Sns" src="index.html" frameborder="0"></iframe></div>
-          </div>
-       </div>
-    </div>
-    <!--/Video Modal-->
- </div>
+</div>
 
 <!-- testimonial section -->
 
+<div class="sticky_section">
 <section class="aos-animate pb-5 pt-5" data-aos="fade-up">
     <div class="container">
         <h2 class="border-l txt-lg mb-3 pl-3">Our Testimonial</h2>
@@ -1729,7 +1933,11 @@ position:relative;
     </div>
     
   </section>
+</div>
 
+<!-- our client section start here -->
+
+<div class="sticky_section">
 <section class="bg-gray pb-5 pt-3 ourclient">
 <div class="container">
 <h2 class="border-l txt-lg mb-3 pl-3">Our Clients</h2>
@@ -1877,24 +2085,113 @@ position:relative;
   </div>
 </div>
 </section>
-    </main><!-- /.container -->
-    <!--  /Main content Section-->
-    <div class="modal video" id="system-availability">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <!-- Modal Header -->
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        
-                    </div>
-                </div>
-            </div>
+
+
+
+    <!-- social media section start here -->
+
+    <section>
+         <!-- what's up button start -->
+      <div class="whatsUp-btn">
+        <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+        </a>
+      </div> 
+  
+    <!-- email start here -->
+      <div class="email">
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&su=Query&body=Hello%2C%20I%20would%20like%20to%20know%20more..." 
+        class="float-email" target="_blank" title="Email Us">
+        <i class="fa-solid fa-envelope my-float-email"></i>
+    </a>
+     </div>
+    </section>
+
+    <section  class="position-fixed form_btn" style="right: 0;
+    z-index: 999;
+    bottom: 0;
+    width: 18rem;"> 
+    <div class="contact-form-btn position-relative">
+        <div class="query-header" style="border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;background-color: #f9ec21 !important;color:#008000; cursor: pointer;">
+        Drop us a Query <span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </span>
         </div>
     </div>
+    </section>
+
+    <section class="position-fixed  drop_form" style="z-index: 99999; bottom:0;right:0;display: none;">
+  <!-- contact form start -->
+    <div class="contact-form">
+  
+   
+       <div class="contact_form">
+         <div class="query-box">
+    <div class="query-header" id="form_hidden">
+      Drop us a Query <span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </span>
+    </div>
+    <div class="query-body">
+      <div style="display: flex;justify-content: center;">
+        <img src="./images/ports/contact/24x7-available.png" alt="contact us">
+      </div>
+      <div class="phone-info">
+        <div class="phone-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.523" height="16.491" viewBox="0 0 16.523 16.491"><path data-name="Path 24546" d="M53.8,12.05l-2.3-2.3a1.569,1.569,0,0,0-2.2,0,2.092,2.092,0,0,0-.4.6,1.566,1.566,0,0,1-1.8,1,7.3,7.3,0,0,1-4.3-4.3,1.431,1.431,0,0,1,1-1.8,1.584,1.584,0,0,0,1-1.9,2.092,2.092,0,0,0-.4-.6L42.1.45a1.569,1.569,0,0,0-2.2,0l-1.6,1.6c-1.6,1.6.2,6,4,9.8,3.9,3.9,8.2,5.7,9.8,4l1.6-1.6a1.485,1.485,0,0,0,.1-2.2" transform="translate(-37.72)"></path></svg>
+        </div>
+        <div class="phone-text" style="padding-top: 0.5rem;">
+           <div class="phone_num"><a href="tel:+91 89517 55408"  style="color:#008000;text-decoration: none;">+91 89517 55408</a></div>
+           <div class="availability">Available 24x7 for your queries</div>
+        </div>
+       
+      </div>
+      
+
+      <textarea placeholder="Type your query here*" rows="4"></textarea>
+
+      <div class="phone-input" style="display: flex;flex-direction: column;">
+        <label class="duq_label__3Wlxi form-label" for="duqFormPhoneNumber" 
+        style="font-size: 13px;
+              line-height: 1.23;
+              text-align: left;
+              color: #3a5075;"
+    >Phone Number</label>
+        <div style="display: flex;">
+          <select>
+          <option value="IN">IN +91</option>
+          <option value="US">US +1</option>
+          <option value="UK">UK +44</option>
+        </select>
+        <input type="text" placeholder="Enter Phone Number*" />
+        </div>
+      </div>
+
+       <div class="email-input" style="display: flex;flex-direction: column;row-gap:0.5rem;">
+        <label class="duq_label__3Wlxi form-label" for="duqFormPhoneNumber" style="font-size: 13px;
+              line-height: 1.23;
+              text-align: left;
+              color: #3a5075;">Email</label>
+        <div>
+        <input type="email" placeholder="Enter your email*" />
+        </div>
+      </div>
+      <!-- <input type="email" placeholder="Enter your email*" /> -->
+
+      <button class="submit-button" style="cursor: pointer;">SUBMIT QUERY</button>
+    </div>
+  </div>
+       </div>
+    </div>
+    <!-- contact form end -->
+    </section>
+
+  <!-- social media section end here -->
 
     <!-- Footer -->
+
+
     <footer class="pt-5 bg-white position-relative d-block">
         
 
@@ -2093,6 +2390,7 @@ position:relative;
             </div>
         </div>
     </footer>
+</div>
     <!-- /Footer -->
     <!-- To top -->
     <a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
@@ -2207,6 +2505,24 @@ position:relative;
       },
     });
   </script>
+
+
+
+<!-- social media script start here -->
+<script>
+    const formButn = document.querySelector(".form_btn");
+    const dropForm = document.querySelector(".drop_form");
+    const secDropfrom = document.querySelector("#form_hidden");
+    formButn.onclick=()=>{
+        dropForm.style.display="block";
+    }
+    secDropfrom.onclick=()=>{
+     dropForm.style.display="none";
+    //  console.log("hello world")
+    }
+</script>
+<!-- social media script end here -->
+
     <!-- slider script end here  -->
     <script src="scripts/Power/jquery.min.js@v2"></script>
 <script src="scripts/Power/popper.min.js"></script>
